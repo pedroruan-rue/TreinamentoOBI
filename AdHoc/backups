@@ -1,0 +1,32 @@
+            if n[-1] == '5' or n[-1] == '0':
+                print(n)
+                if n[-2] == '0':
+                    if (n[:-2] + n[-1])[-2:] in ends:
+                        n = n[:-2] + n[-1]
+                    else: n = n[:-1]
+                else: 
+                    n = n[:-2] + n[-1]
+                moves += 1
+            else:
+                n = n[:-1]
+                moves +=1
+
+if n[-2:] in ends:
+            break
+        else:
+            if n[-1] == '0':
+                for a in reversed(n[:-1]):
+                    if a == '7' or a == '2':
+                        break
+                    else:
+                        n = n[1:-2] + n[-1]
+                        moves += 1
+            elif n[-1] == '5':
+                for a in reversed(n[:-1]):
+                    if a == '7' or a == '2':
+                        break
+                    else:
+                        n = n[:-2] + n[-1]
+                        moves += 1
+            else:
+                n = n[:-1]
